@@ -25,7 +25,6 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ## Screenshot
-
-    <img height="100px" width="100px" src="https://firebasestorage.googleapis.com/v0/b/images-af837.appspot.com/o/TinderSay%2FScreenshot%201943-04-26%20at%2011.19.10%20AM.png?alt=media&token=39714455-361d-4f2a-872a-0fdbd7681b9e" />
+![screenshot](https://firebasestorage.googleapis.com/v0/b/images-af837.appspot.com/o/TinderSay%2FScreenshot%201943-04-26%20at%2011.19.10%20AM.png?alt=media&token=39714455-361d-4f2a-872a-0fdbd7681b9e)
 
 ## Demo
