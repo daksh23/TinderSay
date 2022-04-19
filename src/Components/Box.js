@@ -1,19 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSprings } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
-
+import axios from 'axios'
 import CardBox from "./CardBox";
-
-const cards = [
-  "red",
-  "blue",
-  "green",
-  "yellow",
-  "blue",
-  "green",
-  "yellow",
-  "white",
-];
+import { getQuotes } from '../Services/apis'
 
 var to = function (i) {
   return {
@@ -45,7 +35,19 @@ var trans = function (r, s) {
 function Box() {
   const [gone] = useState(() => new Set());
 
-  const [props, api] = useSprings(cards.length, (i) => ({
+  const [quote, setQuote] = React.useState([]);
+
+  useEffect(async () => {
+    
+    const data =  await getQuotes();
+
+      setQuote(data);
+    // })
+
+  }, [])
+  
+
+  const [props, api] = useSprings(quote.length, (i) => ({
     ...to(i),
     from: from(i),
   }));
@@ -77,7 +79,7 @@ function Box() {
           config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 },
         };
       });
-      if (!down && gone.size === cards.length)
+      if (!down && gone.size === quote.length)
         setTimeout(() => {
           gone.clear();
           api.start((i) => to(i));
@@ -97,6 +99,7 @@ function Box() {
           i={i}
           trans={trans}
           bind={bind}
+          quotes={quote[i]}
         />
       ))}
     </>

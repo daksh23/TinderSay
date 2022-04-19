@@ -5,8 +5,6 @@ import {
   CardContent,
   Box,
   Typography,
-  Paper,
-  Grid,
 } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -52,19 +50,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Cards = () => {
+const Cards = ({quote}) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
       <CardContent>
         <Typography className={classes.text} variant="h5">
-          “Your time is limited, so don’t waste it living someone else’s life.
-          Don’t be trapped by dogma – which is living with the results of other
-          people’s thinking.”
+          {quote.text}
         </Typography>
         <Typography variant="subtitle1" className={classes.Author}>
-          - steve jobs
+          {quote.author}
         </Typography>
       </CardContent>
       <CardActions>

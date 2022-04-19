@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CardBox = ({ x, y, rot, scale, i, bind, trans }) => {
+const CardBox = ({ x, y, rot, scale, i, bind, trans,quotes }) => {
   const classes = useStyles();
-
+  
   return (
     <animated.div
       className={classes.box}
@@ -46,7 +46,7 @@ const CardBox = ({ x, y, rot, scale, i, bind, trans }) => {
         }}
       >
         <div className={classes.cardBox}>
-          <Cards />
+          <Cards quote={quotes} />
         </div>
       </animated.div>
     </animated.div>
