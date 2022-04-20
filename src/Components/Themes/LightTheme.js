@@ -13,6 +13,10 @@ const LightTheme = createTheme({
     gradientOne: "E0E5EC",
     gradientTwo: "E0E5EC",
   },
+  btnShadow: {
+    plus: "#a3b1c6",
+    min: "#F4FAFF",
+  },
 });
 
 export default LightTheme;

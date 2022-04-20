@@ -18,8 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = () => {
+const Header = ({tc}) => {
   const classes = useStyles();
+
 
   return (
     <div>
@@ -28,7 +29,7 @@ const Header = () => {
           <Typography variant="h4" className={classes.title}>
             TinderSay
           </Typography>
-          <Button color="inherit" className={classes.btn} onClick={() => alert("Working on it")}>
+          <Button color="inherit" className={classes.btn} onClick={() => tc()}>
             <WbSunnyIcon />
           </Button>
         </Toolbar>
