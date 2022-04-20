@@ -28,7 +28,7 @@ const Header = () => {
           <Typography variant="h4" className={classes.title}>
             TinderSay
           </Typography>
-          <Button color="inherit" className={classes.btn}>
+          <Button color="inherit" className={classes.btn} onClick={() => alert("Working on it")}>
             <WbSunnyIcon />
           </Button>
         </Toolbar>

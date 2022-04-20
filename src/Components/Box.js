@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSprings } from "@react-spring/web";
 import { useDrag } from "react-use-gesture";
-import axios from 'axios'
 import CardBox from "./CardBox";
 import { getQuotes } from '../Services/apis'
 
@@ -37,12 +36,14 @@ function Box() {
 
   const [quote, setQuote] = React.useState([]);
 
-  useEffect(async () => {
+  useEffect( () => {
     
-    const data =  await getQuotes();
-
+    async function fetchData() {
+      const data =  await getQuotes();
       setQuote(data);
-    // })
+    }
+
+    fetchData();
 
   }, [])
   

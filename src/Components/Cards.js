@@ -54,7 +54,7 @@ const Cards = ({quote}) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} id="card-id">
       <CardContent>
         <Typography className={classes.text} variant="h5">
           {quote.text}
@@ -64,7 +64,7 @@ const Cards = ({quote}) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Box flexGrow={1} display="flex" justifyContent="center">
+        <Box flexGrow={1} display="flex" justifyContent="center" id="btn-grp">
           <Box m={1}>
             <ReplayIcon className={classes.smallIcon} />
           </Box>
